@@ -65,6 +65,30 @@ border:1px solid #558ab7 !important;
 
 /* 메인메뉴 */
 .nav-item a{font-size: 1.6em; font-weight: bold;}
+.video video{
+  object-fit: fill;width: 100%;
+  height: auto;
+}
+.video{
+    width: 100%;      
+}
+
+.visual{
+  background-image: url(../img/main_visual_bg01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.visual-2{
+  background-image: url(../img/main_visual_bg02.png);
+  background-color:  #cef5f5;;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
 
 
 /* 중간 레이아웃 */
