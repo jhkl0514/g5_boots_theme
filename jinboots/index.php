@@ -17,7 +17,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <style>
     .mView{
-        width: 100%; padding-top: 36%; _background:red;
+        width: 100%; padding-top: 36%;
         position: relative; overflow: hidden;
     }
     .mView video{position: absolute; width: 100%; left: 50%; top: 50%; transform: translate(-50%,-50%)}
@@ -25,7 +25,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </style>
 
 <!-- <div class="mView">
-    <img src="<? echo G5_THEME_IMG_URL ?>/pc01.jpg" alt="">
+    <img src="<?php echo G5_THEME_IMG_URL ?>/pc01.jpg" alt="">
 </div> -->
 
 <div class="line"></div>
@@ -40,7 +40,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <div class="container">
     <div class="row p-5 m-5" >
         <div class="col-lg-7 position-relative">
-            <img src="<? echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid"> 
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid"> 
         </div>
         <div class="col-lg-5 d-flex flex-wrap">
             <h2 class="fs-2 fw-bold mt-auto">YBM 레몬만의<br> 전용뷰어로 수업</h2>
@@ -59,7 +59,7 @@ include_once(G5_THEME_PATH.'/head.php');
             </p>
         </div>
         <div class="col-lg-6 position-relative">
-            <img src="<? echo G5_THEME_IMG_URL ?>/main_visual_02.png" alt="" class="img-fluid">          
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_02.png" alt="" class="img-fluid">          
         </div>
     </div>
 </div>
@@ -67,7 +67,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <div class="container">
     <div class="row p-5 m-5" >
         <div class="col-lg-7 position-relative">
-            <img src="<? echo G5_THEME_IMG_URL ?>/main_visual_03.png" alt=""  class="img-fluid"> 
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_03.png" alt=""  class="img-fluid"> 
         </div>
         <div class="col-lg-5 d-flex flex-wrap">
             <h2 class="fs-2 fw-bold mt-auto">지루할 틈이 없는 수업 진행</h2>
@@ -87,7 +87,7 @@ include_once(G5_THEME_PATH.'/head.php');
             </p>
         </div>
         <div class="col-lg-6 position-relative">
-            <img src="<? echo G5_THEME_IMG_URL ?>/main_visual_04.png" alt="" class="img-fluid">          
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_04.png" alt="" class="img-fluid">          
         </div>
     </div>
 </div>
@@ -95,7 +95,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <div class="container">
     <div class="row p-5 m-5" >
         <div class="col-lg-7 position-relative">
-            <img src="<? echo G5_THEME_IMG_URL ?>/main_visual_05.png" alt=""  class="img-fluid"> 
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_05.png" alt=""  class="img-fluid"> 
         </div>
         <div class="col-lg-5 d-flex flex-wrap">
             <h2 class="fs-2 fw-bold mt-auto">
@@ -118,72 +118,129 @@ include_once(G5_THEME_PATH.'/head.php');
             <p class="fs-6 mt-3 mb-5">체계적인 관리를 통해 우리 아이의 학습효과를 극대화 합니다.
         </div>
         <div class="col-lg-12 d-flex justify-content-center">
-            <img src="<? echo G5_THEME_IMG_URL ?>/graph.png" alt=""  class="img-fluid"> 
+            <img src="<?php echo G5_THEME_IMG_URL ?>/graph.png" alt=""  class="img-fluid"> 
         </div>        
     </div>
 </div>
 
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
-        <div class="col">
+        <div class="col-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-2 col-sm-3 d-flex justify-content-center align-items-center">
-                        <img src="<? echo G5_THEME_IMG_URL ?>/main_icon_report_01.png" alt="card-horizontal-image">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_report_01.png" alt="card-horizontal-image">
                     </div>
                     <div class="col-10 col-sm-7">
-                        <div class="card-body">
-                            <h5 class="card-title fs-6 fw-bold">학습 결과 보고서</h5>
-                            <p class="card-text fw-bold text-secondary ">Daily Class Report</p>                        
+                        <div class="mt-4 mb-4">
+                            <h5 class="fs-5 fw-bold">학습 결과 보고서</h5>
+                            <p class="fs-6 text-secondary ">Daily Class Report</p>                        
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col">
+         <div class="col-3">
             <div class="card">
-                <div class="row g-0">
-                    <div class="col-5 col-sm-4">
-                    <img src="assets/images/bs-images/img-3x4.png" class="img-fluid w-100" alt="card-horizontal-image">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_test_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-7 col-sm-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4">
+                            <h5 class="fs-5 fw-bold">성취도 테스트</h5>
+                            <p class="fs-6 text-secondary ">Achievement Test</p>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col">
+         <div class="col-3">
             <div class="card">
-                <div class="row g-0">
-                    <div class="col-5 col-sm-4">
-                    <img src="assets/images/bs-images/img-3x4.png" class="img-fluid w-100" alt="card-horizontal-image">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_solution_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-7 col-sm-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4">
+                            <h5 class="fs-5 fw-bold">화상솔루션</h5>
+                            <p class="fs-6 text-secondary ">Online Learning Solutins</p>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-3">
             <div class="card">
-                <div class="row g-0">
-                    <div class="col-5 col-sm-4">
-                    <img src="assets/images/bs-images/img-3x4.png" class="img-fluid w-100" alt="card-horizontal-image">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_homework_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-7 col-sm-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4 ms-0">
+                            <h5 class="fs-5 fw-bold">온오프라인숙제관리</h5>
+                            <p class="fs-6 text-secondary ">Homework</p>                        
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+		 <div class="col-3">
+            <div class="card">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_attendance_01.png" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4 ms-0">
+                            <h5 class="fs-5 fw-bold">출결관리</h5>
+                            <p class="fs-6 text-secondary ">Attendance</p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		 <div class="col-3">
+            <div class="card">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_counsel_01.png" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4 ms-0">
+                            <h5 class="fs-5 fw-bold">정기상담관리</h5>
+                            <p class="fs-6 text-secondary ">Requla Consulting</p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		 <div class="col-3">
+            <div class="card">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_alert_01.png" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4 ms-0">
+                            <h5 class="fs-5 fw-bold">모바일 알림</h5>
+                            <p class="fs-6 text-secondary ">Notifications</p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="col-3">
+            <div class="card">
+                <div class="row g-0 ">
+                    <div class="col-2 col-sm-3 d-flex align-items-center ms-4">
+                        <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_point_01.png" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-10 col-sm-7">
+                        <div class="mt-4 mb-4 ms-0">
+                            <h5 class="fs-5 fw-bold">포인트 제도</h5>
+                            <p class="fs-6 text-secondary ">Rewad System</p>                        
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 초기화 */
-html {overflow-y:scroll; }
+html {overflow-y:scroll}
 body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sans-serif;background:#fff}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em;font-family:'Malgun Gothic', dotum, sans-serif}
@@ -44,6 +44,10 @@ border:1px solid #558ab7 !important;
 
 .placeholdersjs {color:#aaa !important}
 
+
+h2.stitle{font-size: 32px;}
+
+
 /* 팝업레이어 */
 #hd_pop {z-index:1000;position:relative;margin:0 auto;height:0}
 #hd_pop h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
@@ -56,45 +60,35 @@ border:1px solid #558ab7 !important;
 .hd_pops_footer .hd_pops_reject {background:#000;text-align:left}
 .hd_pops_footer .hd_pops_close {background:#393939;position:absolute;top:0;right:0}
 
-/* 레이아웃 크기 지정 */
-
-
-
 /* 상단 레이아웃 */
 
 
 /* 메인메뉴 */
-.nav-item > a{font-size: 1.6em; font-weight: bold;}
-.video video{
-  object-fit: fill;width: 100%;
-  height: auto;
-}
-.video{
-    width: 100%;      
-}
-
-.visual{
-  background-image: url(../img/main_visual_bg01.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.visual-2{
-  background-image: url(../img/main_visual_bg02.png);
-  background-color:  #cef5f5;;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-
+.nav-item > a{font-size: 1.6em;font-weight: bold;}
 
 
 /* 중간 레이아웃 */
+.subView{
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subView.subTopBg_01{background-image: url(../img/images01.jpg);}
+.subView.subTopBg_02{background-image: url(../img/images02.jpg);}
+.subView.subTopBg_03{background-image: url(../img/images03.jpg);}
+.subView.subTopBg_04{background-image: url(../img/images04.jpg);}
+.subView.subTopBg_05{background-image: url(../img/images05.jpg);}
+.stitle{}
+.locTitle{margin-top:-20px ;}
+
 
 
 /* 하단 레이아웃 */
+
 
 
 /* 게시물 선택복사 선택이동 */
@@ -353,4 +347,3 @@ box-sizing:content-box;
 
 /* Mobile화면으로 */
 #device_change {display:block;margin:0.3em;padding:0.5em 0;border:1px solid #eee;border-radius:2em;background:#fff;color:#000;font-size:2em;text-decoration:none;text-align:center}
-

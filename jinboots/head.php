@@ -21,35 +21,36 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-          <div class="container">
-            <a class="navbar-brand" href="<? echo G5_URL?>">
-                <img src="<? echo G5_THEME_IMG_URL ?>/logo.svg" alt="" style="width:180px">
-            </a>
 
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
 
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <a class="navbar-brand" href="<? echo G5_URL?>">
+            <img src="<? echo G5_THEME_IMG_URL ?>/logo.svg" alt="" style="width:180px">
+        </a>
 
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">                   
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <?php
-                    $menu_datas = get_menu_db(0, true);
-                    $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
-                    $i = 0;
-                    foreach( $menu_datas as $row ){
-                        if( empty($row) ) continue;
-                        
-                    ?>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+
+                <?php
+				$menu_datas = get_menu_db(0, true);
+				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
+                $i = 0;
+                foreach( $menu_datas as $row ){
+                    if( empty($row) ) continue;
+                    
+                ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="<?php echo $row['me_link']; ?>" id="navbarDropdownMenuLink" role="button" 
-                        data-bs-toggle="dropdown" aria-expanded="false" target="_<?php echo $row['me_target'];  ?>">
-                            <?php echo $row['me_name'] ?></a>
+                        <a class="nav-link" href="<?php echo $row['me_link']; ?>" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" target="_<?php echo $row['me_target']; ?>">
+                            <?php echo $row['me_name'] ?>
                         </a>
-
                         <!-- 서브 -->
                         <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -58,52 +59,50 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         </ul> -->
 
                         <?php
-                            $k = 0;
-                            foreach( (array) $row['sub'] as $row2 ){
+                        $k = 0;
+                        foreach( (array) $row['sub'] as $row2 ){
 
-                                if( empty($row2) ) continue; 
+                            if( empty($row2) ) continue; 
 
-                                if($k == 0)
-                                    echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">'.PHP_EOL;
+                            if($k == 0)
+                                echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">'.PHP_EOL;
                         ?>
-                                <li>
-                                    <a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="dropdown-item">
-                                    <?php echo $row2['me_name'] ?></a>
-                                </li>
+
+                            <li >
+                                <a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"  class="dropdown-item">
+                                    <?php echo $row2['me_name'] ?>
+                                </a>
+                            </li>
+
                         <?php
-                            $k++;
-                            }   //end foreach $row2
+                        $k++;
+                        }   //end foreach $row2
 
-                            if($k > 0)
-                                echo '</ul>'.PHP_EOL;
+                        if($k > 0)
+                            echo '</ul>'.PHP_EOL;
                         ?>
-
-
                         <!-- 서브 -->
                     </li>
-                   
-                    <?php
-                    $i++;
-                    }   //end foreach $row
+                <?php
+                $i++;
+                }   //end foreach $row
 
-                ?>     
-                    
-                </ul>   
-
-               
+               ?>
 
 
-            </div>
-      </div>
-    </nav>
+            </ul>
+
+            
 
 
+        </div>
+  </div>
+</nav>
 
 
 
 
 
-    
 
 <!-- } 상단 끝 -->
 
@@ -112,10 +111,25 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <!-- 콘텐츠 시작 { -->
 
-    <!-- 메인페이지는 100% 서브는 1400 -->   
-    <?  if(defined('_INDEX_')) { ?>
-        <div class="container_wr">
-    <? } else {?>
-        <div class="container">
-    <?}?>    
-    
+<? if(!defined('_INDEX_')) { ?> 
+   <div class="subView" id="page_title">
+
+    <div class="txtWrap">
+        <h2 class="loc1D stitle text-white locTitle"></h2>
+    </div>
+
+   </div>
+<? }?>
+
+
+
+<? if(defined('_INDEX_')) { ?> 
+    <div class="container_wr"> <!-- full -->
+<? }else{?>
+    <div class="container position-relative"> <!-- 1400 -->
+        <h2 id="container_title" class="stitle text-center py-3">
+            <span title="<?php echo get_text($g5['title']); ?>">
+            <?php echo get_head_title($g5['title']); ?></span>
+        </h2>
+
+<?}?>
