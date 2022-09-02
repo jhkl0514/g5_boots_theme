@@ -21,6 +21,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
+    <?php
+    if(defined('_INDEX_')) { // index에서만 실행
+        include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
+    }
+    ?>    
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container">
